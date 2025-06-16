@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatWorld - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container" id="login-section">
+    <h2>ChatWorld Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+    <p id="login-message"></p>
+  </div>
+
+  <div class="chat-container hidden" id="chat-section">
+    <div class="chat-header">
+      <h2>Welcome to ChatWorld</h2>
+      <button onclick="logout()">Exit</button>
+    </div>
+    <div class="chat-box" id="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="message" placeholder="Type a message..." onkeydown="handleKey(event)">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
